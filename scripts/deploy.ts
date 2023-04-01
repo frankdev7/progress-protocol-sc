@@ -1,13 +1,13 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const MyNFT = await ethers.getContractFactory("MyNFT");
-  const myNFT = await MyNFT.deploy();
+  const MyToken = await ethers.getContractFactory("MyToken");
+  const myToken = await MyToken.deploy();
 
-  await myNFT.deployed();
+  await myToken.deployed();
 
   console.log(
-    `MyNFT deployed to ${myNFT.address}`
+    `MyNFT deployed to ${myToken.address}`
   );
 }
 
