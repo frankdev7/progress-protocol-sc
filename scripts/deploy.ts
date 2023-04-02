@@ -1,13 +1,13 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const MyToken = await ethers.getContractFactory("MyToken");
-  const myToken = await MyToken.deploy();
+  const IntroCrypto = await ethers.getContractFactory("IntroCrypto");
+  const myToken = await IntroCrypto.deploy();
 
   await myToken.deployed();
 
   console.log(
-    `MyNFT deployed to ${myToken.address}`
+    `IntroCrypto deployed to ${myToken.address}`
   );
 }
 
