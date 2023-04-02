@@ -21,6 +21,61 @@ Metada [here](https://ipfs.io/ipfs/QmTJQq9sntfhrXvdQSWfopvN59gSP7PaHjpKyyiXVhiGc
 Solidity 8.0.1 [here](https://docs.soliditylang.org/en/v0.8.1/)
 
 
+# APIs: Alumno
+
+# safeMint (Inscribirse a un curso)
+
+```http
+safeMint(address)
+```
+### Request
+
+```sodlity
+{
+  "address" : address
+}
+```
+
+El atributo `address` es la direccion del alumno, al que se le minteara el nft (incripcion al curso)
+
+
+# upLevel (Subir al siguiente Nivel en un curso) (OnlyOwner)
+
+```http
+upLevel(address)
+```
+### Request
+
+```sodlity
+{
+  "address" : address
+}
+```
+
+El atributo `address` es la direccion del alumno, al que se le subira al siguiente nivel del curso
+
+
+# APIs: Administrador del curso
+
+# setLevelURI (Cambiar la metadata para un un nivel del curso)
+
+```http
+upLevel(uint256, string)
+```
+### Request
+
+```sodlity
+{
+  "_level": uint256,
+  "_UIR": string
+}
+```
+
+El atributo `_level` es el nivel del curso al cual se le cambiara la metadata
+
+El atributo `_UIR` es el nuevo URI de la metadata del curso
+
+
 ## Comdandos utiles
 
 ```shell
